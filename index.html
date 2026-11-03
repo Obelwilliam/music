@@ -223,10 +223,6 @@
           <button id="next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6zM16 6v12h2V6z"/></svg></button>
           <button class="sm rep" id="rep" aria-label="Repeat"><svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg></button>
         </div>
-        <label class="vol">
-          <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
-          <input type="range" id="vol" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
-        </label>
       </div>
     </section>
   </main>
@@ -262,7 +258,7 @@
     { title: "Madman",                    artist: "TR Craze ft. Jay Hot",              src: "audio/madman.m4a" },
     { title: "Jalä Kä Roda",              artist: "TR Craze",                          src: "audio/jala-ka-roda.mp3" },
     { title: "Jongo",                     artist: "TR Craze",                          src: "audio/jongo.mp3" },
-    { title: "Tier Myakuon",              artist: "TR Craze",                          src: "audio/tier-myakuon.mp3" },
+    { title: "Tier Nyakuon",              artist: "TR Craze",                          src: "audio/tier-myakuon.mp3" },
     { title: "Tule Tule",                 artist: "TR Craze",                          src: "audio/tule-tule.mp3" },
     { title: "MAMA",                      artist: "TR Craze",                          src: "audio/mama.mp3" },
     { title: "Bol Brown (Bol in Doär Diss)", artist: "TR Craze",                       src: "audio/bol-brown.m4a" },
@@ -358,7 +354,7 @@
     $("mtoggle").setAttribute("aria-label", on ? "Pause" : "Play");
   }
   function toast(msg) { var t = $("toast"); t.textContent = msg || ""; t.hidden = !msg; }
-  function missingMsg() { return "Please check your internet connection"; }
+  function missingMsg() { return "Please Check Your Internet Connection!"; }
 
   function play(i, q, auto) {
     if (q) queue = q.slice();
@@ -426,7 +422,6 @@
   }
   $("shuf").addEventListener("click", function () { shuffle = !shuffle; syncModes(); });
   $("rep").addEventListener("click", function () { repeat = repeat === "all" ? "one" : "all"; syncModes(); });
-  $("vol").addEventListener("input", function (e) { audio.volume = e.target.value; });
   $("seek").addEventListener("input", function () { if (audio.duration) audio.currentTime = ($("seek").value / 100) * audio.duration; });
 
   audio.addEventListener("play", function () { setIcon(true); });
