@@ -148,7 +148,7 @@
     { title: "Madman",                    artist: "TR Craze ft. Jay Hot",              src: "audio/madman.m4a" },
     { title: "Jalä Kä Roda",              artist: "TR Craze",                          src: "audio/jala-ka-roda.mp3" },
     { title: "Jongo",                     artist: "TR Craze",                          src: "audio/jongo.mp3" },
-    { title: "Tier Myakuon",              artist: "TR Craze",                          src: "audio/tier-myakuon.mp3" },
+    { title: "Tier Nyakuon",              artist: "TR Craze",                          src: "audio/tier-myakuon.mp3" },
     { title: "Tule Tule",                 artist: "TR Craze",                          src: "audio/tule-tule.mp3" },
     { title: "MAMA",                      artist: "TR Craze",                          src: "audio/mama.mp3" },
     { title: "Bol Brown (Bol in Doär Diss)", artist: "TR Craze",                       src: "audio/bol-brown.m4a" },
@@ -241,7 +241,7 @@
   });
   audio.addEventListener("error", function () {
     setPlaying(false);
-    document.getElementById("err").textContent = "Song file not found: " + audio.getAttribute("src") + " (upload the audio folder next to index.html)";
+    document.getElementById("err").textContent = "Please check your internet connection";
   });
 
   if ("mediaSession" in navigator) {
