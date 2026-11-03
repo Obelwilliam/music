@@ -159,7 +159,7 @@
     { title: "Mar Rom",                   artist: "TR Craze",                          src: "audio/mar-rom.mp3" },
     { title: "Studio Freestyle",          artist: "TR Craze",                          src: "audio/studio-freestyle.mp3" },
     { title: "Cako Cuuc",                 artist: "TR Craze x Jalo Jay",               src: "audio/cako-cuuc.mp3" },
-    { title: "Riet Ti Gow",               artist: "TR Craze x Lakal 23",               src: "audio/riet-ti-gow.mp3" }
+    { title: "Riet Ti Gow",               artist: "TR Craze x Lakal 23",              src: "audio/riet-ti-gow.mp3" }
   ];
 
   var audio = document.getElementById("audio");
@@ -220,7 +220,7 @@
   }
 
   document.getElementById("toggle").addEventListener("click", function () {
-    if (audio.paused) audio.play().catch(function (e) { if (!e || e.name === "AbortError") return; document.getElementById("err").textContent = e.name === "NotSupportedError" ? "Song file not found: " + audio.getAttribute("src") + " (upload the audio folder next to index.html)" : "Could not play: " + e.name; }); else audio.pause();
+    if (audio.paused) audio.play().catch(function (e) { if (!e || e.name === "AbortError") return; document.getElementById("err").textContent = e.name === "NotSupportedError" ?  "No Internet" : "Could not play: " + e.name; }); else audio.pause();
   });
   document.getElementById("next").addEventListener("click", function () { load(current + 1, true); });
   document.getElementById("prev").addEventListener("click", function () {
