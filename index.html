@@ -210,7 +210,7 @@
     if ("mediaSession" in navigator && window.MediaMetadata) {
       navigator.mediaSession.metadata = new MediaMetadata({ title: t.title, artist: t.artist, album: "Tr Craze Music" });
     }
-    if (autoplay) audio.play().catch(function (e) { if (!e || e.name === "AbortError") return; document.getElementById("err").textContent = e.name === "NotSupportedError" ? "Song file not found: " + audio.getAttribute("src") + " (upload the audio folder next to index.html)" : "Could not play: " + e.name; });
+    if (autoplay) audio.play().catch(function (e) { if (!e || e.name === "AbortError") return; document.getElementById("err").textContent = e.name === "NotSupportedError" ? "Please check your Internet connection" : "Could not play: " + e.name; });
   }
 
   function setPlaying(on) {
